@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="IPL visualization">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>
+        IPL Visualization
+    </title>
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+</head>
+
+<body>
+    <div>
+        <script defer async src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <h1 style="text-align: center;">IPL Dataset visualization</h1>
+        <div id="matches-played-per-year"
+            style="min-width: 310px; height: 450px; margin: 50px 50px 50px 50px ;padding: 30px 30px 30px 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2%;">
+        </div>
+        <!--script src="./app.js"></script-->
+        <hr>
+        <div id="matches-won-per-team"
+            style="min-width: 310px; height: 500px; margin: 50px 50px 50px 50px ;padding: 30px 30px 30px 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2%;">
+        </div>
+        <!--script src="./app2.js"></script-->
+        <hr>
+        <h2>Select the season to see the extra runs given by each team</h2>
+        <div>
+            <select id="season" name="season" style="margin-left:70px;height:50px;min-width: 210px;border-radius: 4px;">
+                <option value="" selected="" disabled="" hidden="">Choose here</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+            </select>
+            <button type="submit" onclick="show()" style="height:50px;width:100px;border-radius:5px;">Show</button>
+            <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+
+        </div>
+        <div id="extra-Runs"
+            style="min-width: 410px; height: 450px;margin:0 50px 50px 50px  ;padding: 30px 30px 30px 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2%;">
+        </div>
+        <script src="./app3.js"></script>
+        <hr>
+        <div id="economical-bowler"
+            style="min-width: 310px; height: 450px; margin:50px 50px 50px 50px  ;padding: 30px 30px 30px 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2%;">
+        </div>
+
+        <!--script src="./app4.js"></script-->
+        <hr>
+        <div id="winning-team-per-venue"
+            style="min-width: 310px; height: 950px; margin:50px 50px 50px 50px  ;padding: 30px 30px 30px 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2%;">
+        </div>
+        <!--script src="./app5.js"></script-->
+        <hr>
+        <div id="wins-per-team-per-season"
+            style="min-width: 310px; height:500px; margin:50px 50px 50px 50px  ;padding: 30px 30px 30px 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2%;">
+        </div>
+        <!--script src="./app6.js"></script-->
+        <hr>
+        <div id="most-matches-won-dl"
+            style="min-width: 310px; height:500px; margin:50px 50px 50px 50px  ;padding: 30px 30px 30px 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2%;">
+        </div>
+        <!--script src="./app7.js"></script-->
+        <hr>
+        <div id="most_man_of_matches"
+            style="min-width: 400px; height:500px; margin:50px 50px 50px 50px  ;padding: 30px 30px 30px 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 2%;">
+        </div>
+        <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+        <script src="./app.js"></script>
+
+    </div>
+</body>
+
+</html>
