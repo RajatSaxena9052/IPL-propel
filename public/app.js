@@ -7,15 +7,16 @@ function fetchAndVisualizeData() {
 fetchAndVisualizeData();
 
 function visualizeData(data) {
-    //visualiseMatchesPlayedPerYear(data.matchesplayedperyear);
+    visualiseMatchesPlayedPerYear(data.matchesplayedperyear);
     visualizeMatchesWonPerTeam(data.matchesWonPerTeam);
     visualizeEconomicalPlayer(data);
     visualizeWinningTeamPerVenue(data.winningTeamPerVenue);
     visualizeWinningTeamPerTeamPerSeason(data.winsPerTeamPerSeason);
-    // visualizeMostMatchesWon(data.mostMatchesWon);
+    visualizeMostMatchesWon(data.mostMatchesWon);
     visualizeMostManOfMatches(data.mostManOfMatches);
     return;
 }
+
 function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
     const div = document.getElementById("matches-played-per-year")
     div.addEventListener("mouseover", function () {
@@ -25,29 +26,30 @@ function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
         div.style.backgroundColor = "white"
     })
     console.log("rajat saxena from second function")
+    var chart = Highcharts.chart('matches-played-per-year', {
 
-    var chart = Highcharts.chart("matches-played-per-year", {
         title: {
-            text: '1. Matches Played Per Year'
+            text: 'Chart.update'
         },
-
+    
         subtitle: {
-            text: 'Source: <a href="https://www.kaggle.com/nowke9/ipldata/data?select=matches.csv" target="_blank" >IPL Dataset</a>'
+            text: 'Plain'
         },
-
+    
         xAxis: {
-            categories: Object.keys(MatchesPlayedPerYear)
+            categories:Object.keys(MatchesPlayedPerYear) //['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         },
-
+    
         series: [{
             type: 'column',
             colorByPoint: true,
-            data: Object.values(MatchesPlayedPerYear),
+            data: Object.values(MatchesPlayedPerYear),//[29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
             showInLegend: false
         }]
-
+    
     });
-
+    
+    
     $('#plain').click(function () {
         chart.update({
             chart: {
@@ -59,7 +61,7 @@ function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
             }
         });
     });
-
+    
     $('#inverted').click(function () {
         chart.update({
             chart: {
@@ -71,7 +73,7 @@ function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
             }
         });
     });
-
+    
     $('#polar').click(function () {
         chart.update({
             chart: {
@@ -83,6 +85,7 @@ function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
             }
         });
     });
+
 }
 
 function visualizeMatchesWonPerTeam(matchesWonPerTeam) {
@@ -160,6 +163,14 @@ function visualizeMatchesWonPerTeam(matchesWonPerTeam) {
 }
 
 function visualizeEconomicalPlayer(data) {
+    const div = document.getElementById("economical-bowler")
+    div.addEventListener("mouseover", function () {
+        div.style.backgroundColor = "blue"
+    })
+    div.addEventListener("mouseout", function () {
+        div.style.backgroundColor = "white"
+    })
+
     Highcharts.chart("economical-bowler", {
         chart: {
             type: 'column'
@@ -375,7 +386,7 @@ function visualizeWinningTeamPerTeamPerSeason(winsPerTeamPerSeason) {
     });
 
 }
-/*
+
 function visualizeMostMatchesWon(mostMatchesWon){
     const div=document.getElementById("most-matches-won-dl")
     div.addEventListener("mouseover",function(){
@@ -440,7 +451,7 @@ $('#polar').click(function () {
         }
     });
 });
-}*/
+}
 
 function visualizeMostManOfMatches(mostManOfMatches) {
     const div = document.getElementById("most_man_of_matches")
