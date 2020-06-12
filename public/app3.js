@@ -1,31 +1,33 @@
-const div=document.getElementById("extra-Runs")
+function show(){
+    const div=document.getElementById("extra-Runs")
     div.addEventListener("mouseover",function(){
         div.style.backgroundColor="blue"})
     div.addEventListener("mouseout",function(){
         div.style.backgroundColor="white"})
-function show(){
-function fetchAndVisualizeData() {
-    fetch("./data.json")
-      .then(r => r.json())
-      .then(visualdata);
-  }
-fetchAndVisualizeData();
+      
+    let year = document.getElementById("season").value;
 
-function visualdata(data){
-const seas = document.getElementById("season").value;
-let a=[],y=data.extraRunsPerTeam2016[seas];
-
-
-
-    for(let i in y){
-        a.push([i,y[i]])
+    if(year ==""){
+    alert("please select SEASON from the drop down list ")
     }
+
+    fetch("http://localhost:3000/extra-runs?season="+year)
+    .then((resp)=>resp.json()).then((resp)=>{
+        visualizeData(resp[year]);
+
+        function visualizeData(data){
+        console.log(data,year,"yoyo")
+        let a=[];
+            for(let i in data){
+                a.push([i,data[i]])
+            }
+
     Highcharts.chart("extra-Runs", {
     chart: {
         type: 'column'
     },
     title: {
-        text: `3. Extra runs conceded by each team in ${seas}`
+        text: `3. Extra runs conceded by each team in ${year}`
     },
     subtitle: {
         text: 'Source: <a href="https://www.kaggle.com/nowke9/ipldata/data?select=matches.csv" target="_blank">IPL Dataset</a>'
@@ -70,4 +72,5 @@ let a=[],y=data.extraRunsPerTeam2016[seas];
     }]
 });
 }
+});
 }

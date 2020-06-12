@@ -25,11 +25,11 @@ function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
     div.addEventListener("mouseout", function () {
         div.style.backgroundColor = "white"
     })
-    console.log("rajat saxena from second function")
+    
     var chart = Highcharts.chart('matches-played-per-year', {
 
         title: {
-            text: 'Chart.update'
+            text: '1. Matches Played per season'
         },
     
         subtitle: {
@@ -476,7 +476,7 @@ function visualizeMostManOfMatches(mostManOfMatches) {
             type: 'column'
         },
         title: {
-            text: 'Most Man Of Matches'
+            text: '8. Most Man Of Matches'
         },
         subtitle: {
             text: 'Source: <a href="https://www.kaggle.com/nowke9/ipldata/data?select=matches.csv" target="_blank">IPL Dataset</a>'
