@@ -22,3 +22,13 @@
     background-color: #4CAF50;
     color: white;
   }
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #3b39db;
+  }
+  
+  .button2:hover {
+    background-color: #2f8ece;
+    color: white;
+  }

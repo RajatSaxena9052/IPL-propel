@@ -16,7 +16,7 @@ function show(){
         visualizeData(resp[year]);
 
         function visualizeData(data){
-        console.log(data,year,"yoyo")
+    
         let a=[];
             for(let i in data){
                 a.push([i,data[i]])

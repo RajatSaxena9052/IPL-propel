@@ -9,7 +9,7 @@ fetchAndVisualizeData();
 function visualizeData(data) {
     visualiseMatchesPlayedPerYear(data.matchesplayedperyear);
     visualizeMatchesWonPerTeam(data.matchesWonPerTeam);
-    visualizeEconomicalPlayer(data);
+    //visualizeEconomicalPlayer(data);
     visualizeWinningTeamPerVenue(data.winningTeamPerVenue);
     visualizeWinningTeamPerTeamPerSeason(data.winsPerTeamPerSeason);
     visualizeMostMatchesWon(data.mostMatchesWon);
