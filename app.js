@@ -36,5 +36,5 @@ app.get("/economy",(req,res)=>{
 
 
 app.listen(3000,()=>{
-    console.log("server is up and running !! hello")
+    console.log("server is up and running !! please check http://localhost:3000/")
 })
