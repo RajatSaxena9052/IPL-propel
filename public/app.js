@@ -159,7 +159,7 @@ function visualizeMatchesWonPerTeam(matchesWonPerTeam) {
         },
         series: ser,
     })
-    // .then((data) => console.log(data.catch)).catch(e => console.log(e));
+    
 }
 
 
