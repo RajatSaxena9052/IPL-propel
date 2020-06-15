@@ -11,7 +11,7 @@
         alert("please select SEASON from the drop down list ")
         }
     
-        fetch("http://localhost:3000/economy?season1="+year1)
+        fetch(`/economy?season1=${year}`)
         .then((resp)=>resp.json()).then((resp)=>{
             visualizeEconomicalPlayer(resp[year1]);
     function visualizeEconomicalPlayer(data) {
