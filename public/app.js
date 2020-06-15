@@ -47,43 +47,6 @@ function visualizeMatchesPlayedPerYear(MatchesPlayedPerYear) {
         }]
     
     });
-    
-    
-   /* $('#plain').click(function () {
-        chart.update({
-            chart: {
-                inverted: false,
-                polar: false
-            },
-            subtitle: {
-                text:'plain'
-            }
-        });
-    });
-    
-    $('#inverted').click(function () {
-        chart.update({
-            chart: {
-                inverted: true,
-                polar: false
-            },
-            subtitle: {
-                text: 'Inverted'
-            }
-        });
-    });
-    
-    $('#polar').click(function () {
-        chart.update({
-            chart: {
-                inverted: false,
-                polar: true
-            },
-            subtitle: {
-                text: 'Polar'
-            }
-        });
-    });*/
 }
 
 function visualizeMatchesWonPerTeam(matchesWonPerTeam) {
@@ -334,41 +297,6 @@ function visualizeMostMatchesWon(mostMatchesWon){
         showInLegend: false
     }]
 
-});
-$('#plain').click(function () {
-    chart.update({
-        chart: {
-            inverted: false,
-            polar: false
-        },
-        subtitle: {
-            text: 'Plain'
-        }
-    });
-});
-
-$('#inverted').click(function () {
-    chart.update({
-        chart: {
-            inverted: true,
-            polar: false
-        },
-        subtitle: {
-            text: 'Inverted'
-        }
-    });
-});
-
-$('#polar').click(function () {
-    chart.update({
-        chart: {
-            inverted: false,
-            polar: true
-        },
-        subtitle: {
-            text: 'Polar'
-        }
-    });
 });
 }
 
