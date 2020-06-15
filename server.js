@@ -13,8 +13,8 @@ app.get("/extra-runs",(req,res)=>{
                 error:"this is not the season"
             })  
     }
-   // console.log(req.query.season)
-    //console.log(res.json(data.extraRunsPerTeam2016))
+
+
     res.send(
         res.json(data.extraRunsPerTeam2016)
     )
@@ -27,8 +27,7 @@ app.get("/economy",(req,res)=>{
                 error:"this is not the season"
             })  
     }
-    // console.log(req.query.season1)
-    //console.log(res.json(data.economicalBowler2015))
+    
     res.send(
         res.json(data.economicalBowler2015)
 )
