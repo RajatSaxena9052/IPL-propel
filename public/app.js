@@ -7,7 +7,7 @@ function fetchAndVisualizeData() {
 fetchAndVisualizeData();
 
 function visualizeData(data) {
-    visualiseMatchesPlayedPerYear(data.matchesplayedperyear);
+    visualizeMatchesPlayedPerYear(data.matchesplayedperyear);
     visualizeMatchesWonPerTeam(data.matchesWonPerTeam);
     visualizeWinningTeamPerVenue(data.winningTeamPerVenue);
     visualizeWinningTeamPerTeamPerSeason(data.winsPerTeamPerSeason);
@@ -16,7 +16,7 @@ function visualizeData(data) {
     return;
 }
 
-function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
+function visualizeMatchesPlayedPerYear(MatchesPlayedPerYear) {
     const div = document.getElementById("matches-played-per-year")
     div.addEventListener("mouseover", function () {
         div.style.backgroundColor = "blue"
@@ -56,7 +56,7 @@ function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
                 polar: false
             },
             subtitle: {
-                text:'Source: <a href="https://www.kaggle.com/nowke9/ipldata/data?select=matches.csv" target="_blank">IPL Dataset</a>'
+                text:'plain'
             }
         });
     });
