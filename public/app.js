@@ -7,7 +7,7 @@ function fetchAndVisualizeData() {
 fetchAndVisualizeData();
 
 function visualizeData(data) {
-    visualiseMatchesPlayedPerYear(data.matchesplayedperyear);
+    visualizeMatchesPlayedPerYear(data.matchesplayedperyear);
     visualizeMatchesWonPerTeam(data.matchesWonPerTeam);
 
     visualizeWinningTeamPerVenue(data.winningTeamPerVenue);
@@ -17,7 +17,7 @@ function visualizeData(data) {
     return;
 }
 
-function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
+function visualizeMatchesPlayedPerYear(MatchesPlayedPerYear) {
     const div = document.getElementById("matches-played-per-year")
     div.addEventListener("mouseover", function () {
         div.style.backgroundColor = "blue"

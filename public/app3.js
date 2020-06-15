@@ -11,7 +11,8 @@ function show(){
     alert("please select SEASON from the drop down list ")
     }
 
-    fetch("http://localhost:3000/extra-runs?season="+year)
+    // fetch("http://localhost:3000/extra-runs?season="+year)
+    fetch(`http://localhost:3000/extra-runs?season=${year}`)
     .then((resp)=>resp.json()).then((resp)=>{
         visualizeData(resp[year]);
 
