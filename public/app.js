@@ -49,7 +49,7 @@ function visualizeMatchesPlayedPerYear(MatchesPlayedPerYear) {
     });
     
     
-    $('#plain').click(function () {
+   /* $('#plain').click(function () {
         chart.update({
             chart: {
                 inverted: false,
@@ -83,7 +83,7 @@ function visualizeMatchesPlayedPerYear(MatchesPlayedPerYear) {
                 text: 'Polar'
             }
         });
-    });
+    });*/
 }
 
 function visualizeMatchesWonPerTeam(matchesWonPerTeam) {
