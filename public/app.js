@@ -25,24 +25,24 @@ function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
         div.style.backgroundColor = "white"
     })
     
-    var chart = Highcharts.chart('matches-played-per-year', {
+    var chart = Highcharts.chart("matches-played-per-year", {
 
         title: {
-            text: '1. Matches Played per season'
+            text:'1. Matches Played per season'
         },
     
         subtitle: {
-            text: 'Plain'
+            text: 'Source: <a href="https://www.kaggle.com/nowke9/ipldata/data?select=matches.csv" target="_blank">IPL Dataset</a>'
         },
     
         xAxis: {
-            categories:Object.keys(MatchesPlayedPerYear)
+            categories: Object.keys(MatchesPlayedPerYear)
         },
     
         series: [{
             type: 'column',
             colorByPoint: true,
-            data: Object.values(MatchesPlayedPerYear),
+            data:  Object.values(MatchesPlayedPerYear),
             showInLegend: false
         }]
     
@@ -84,7 +84,6 @@ function visualiseMatchesPlayedPerYear(MatchesPlayedPerYear) {
             }
         });
     });
-
 }
 
 function visualizeMatchesWonPerTeam(matchesWonPerTeam) {
