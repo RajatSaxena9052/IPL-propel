@@ -11,8 +11,9 @@
         alert("please select SEASON from the drop down list ")
         }
     
-        fetch(`/economy?season1=${year1}`)
-        .then((resp)=>resp.json()).then((resp)=>{
+        fetch('/economy?season1=' + year1)
+        .then((resp)=>resp.json())
+        .then((resp)=>{
             visualizeEconomicalPlayer(resp[year1]);
     function visualizeEconomicalPlayer(data) {
         let ar=[];
@@ -72,5 +73,6 @@ Highcharts.chart("economical-bowler", {
     }]
 });
     }
-        });
+        }).catch(err => {
+            console.error('Error: ', err)});
     }

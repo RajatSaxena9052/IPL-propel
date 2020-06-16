@@ -5,22 +5,20 @@ function show(){
     div.addEventListener("mouseout",function(){
         div.style.backgroundColor="white"})
       
-    let year = document.getElementById("season").value;
+    const year = document.getElementById("season").value;
 
     if(year ==""){
     alert("please select SEASON from the drop down list ")
     }
 
     // fetch("http://localhost:3000/extra-runs?season="+year)
-    fetch(`/extra-runs?season=${year}`)
+    fetch('/extra-runs?season=' + year)
     .then((resp)=>resp.json())
-    .then((resp)=>{
-        console.log(resp)
-        visualizeData(resp[year]);
-
-        function visualizeData(data){
-    
-        let a=[];
+    .then(respo => {
+        visualizeData(respo[year]);
+    function visualizeData(data){
+             console.log(data)
+                let a=[];
             for(let i in data){
                 a.push([i,data[i]])
             }
@@ -75,5 +73,6 @@ function show(){
     }]
 });
 }
-});
+}).catch(err => {
+    console.error('Error: ', err);})
 }
