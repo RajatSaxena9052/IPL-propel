@@ -11,7 +11,7 @@
         alert("please select SEASON from the drop down list ")
         }
     
-        fetch(`/economy?season1=${year}`)
+        fetch(`/economy?season1=${year1}`)
         .then((resp)=>resp.json()).then((resp)=>{
             visualizeEconomicalPlayer(resp[year1]);
     function visualizeEconomicalPlayer(data) {
