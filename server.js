@@ -16,8 +16,8 @@ app.get("/extra-runs",(req,res)=>{
 
 
     res.send(
-        res.json(data.extraRunsPerTeam2016)
-    )
+        /*res.json(*/data.extraRunsPerTeam2016)
+    //)
 })
 
 app.get("/economy",(req,res)=>{
