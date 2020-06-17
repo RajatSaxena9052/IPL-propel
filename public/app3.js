@@ -15,7 +15,6 @@ function show(){
     fetch('/extra-runs?season=' + year)
     .then((resp)=>resp.json())
     .then(respo => {
-        console.log(respo)
         visualizeData(respo[year]);
     function visualizeData(data){
         console.log(data)

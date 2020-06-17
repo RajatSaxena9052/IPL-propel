@@ -5,6 +5,7 @@ app.use(express.static("./public"));
 
 const fs = require('fs');
 let data = JSON.parse(fs.readFileSync('./public/data.json', 'utf-8'));
+data=data.extraRunsPerTeam2016
 
 app.get("/extra-runs",(req,res)=>{
     if(!req.query.season){
@@ -14,10 +15,11 @@ app.get("/extra-runs",(req,res)=>{
             })  
     }
 
-
+console.log(data)
     res.send(
-        res.json(data.extraRunsPerTeam2016)
-    )
+       // res.json(data/*.extraRunsPerTeam2016*/)
+    JSON.stringify(data)
+       )
 })
 
 app.get("/economy",(req,res)=>{
