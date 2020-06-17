@@ -13,11 +13,14 @@ function show(){
 
     // fetch("http://localhost:3000/extra-runs?season="+year)
     fetch('/extra-runs?season=' + year)
-   //.then((resp)=>resp.json())
+    console.log(resp)
+
+    .then((resp)=>resp.json())
     .then(respo => {
         visualizeData(respo[year]);
     function visualizeData(data){
-             console.log(data)
+        console.log(data)
+
                 let a=[];
             for(let i in data){
                 a.push([i,data[i]])
