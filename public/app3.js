@@ -13,9 +13,9 @@ function show(){
 
     // fetch("http://localhost:3000/extra-runs?season="+year)
     fetch('/extra-runs?season=' + year)
-   .then((resp)=>resp.json())
+   //.then((resp)=>resp.json())
     .then(respo => {
-        visualizeData(respo);
+        visualizeData(respo[year]);
     function visualizeData(data){
              console.log(data)
                 let a=[];
