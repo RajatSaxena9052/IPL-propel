@@ -1,23 +1,22 @@
 const express=require("express")
 const app=express();
 let PORT=process.env.PORT || 3000;
+
 app.use(express.static("./public"));
 
 const fs = require('fs');
 let data = JSON.parse(fs.readFileSync('./public/data.json', 'utf-8'));
 
-app.get("/extra-runs",(req,res)=>{
+app.get("/extra",(req,res)=>{
     if(!req.query.season){
         return res.send(
             {
                 error:"this is not the season"
             })  
     }
-
-
     res.send(
-       JSON.parse(JSON.stringify(data.extraRunsPerTeam2016))
-       // res.json(data.extraRunsPerTeam2016)
+        console.log(data),
+        res.json(data.extraRunsPerTeam2016)
     )
 })
 

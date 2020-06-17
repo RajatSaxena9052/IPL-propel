@@ -74,5 +74,5 @@ Highcharts.chart("economical-bowler", {
 });
     }
         }).catch(err => {
-            console.error('Error: ', err)});
+            console.error('Error: ', err);});
     }
