@@ -7,19 +7,18 @@ function show() {
         div.style.backgroundColor = "white"
     })
 
-    const year = document.getElementById("season").value;
+    let year = document.getElementById("season").value;
 
     if (year == "") {
         alert("please select SEASON from the drop down list ")
     }
 
-    // fetch("http://localhost:3000/extra-runs?season="+year)
     fetch('/extra?season=' + year)
         .then((resp) => resp.json())
-        .then(resp => {
-            console.log("response", typeof resp, resp)
-            visualizeData(resp[year]);
+        .then(resp => { visualizeData(resp[year]);
+
             function visualizeData(data) {
+               
                 console.log(data, "from client side")
 
                 let a = [];

@@ -15,7 +15,7 @@
         .then((resp)=>resp.json())
         .then((resp)=>{
             visualizeEconomicalPlayer(resp[year1]);
-    function visualizeEconomicalPlayer(data) {
+    function visualizeEconomicalPlayer(data){
         let ar=[];
         for(let i in data){
             ar.push([i,parseFloat(data[i])])

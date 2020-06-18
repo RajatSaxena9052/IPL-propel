@@ -15,7 +15,8 @@ app.get("/extra", (req, res) => {
                 error: "this is not the season"
             })
     }
-     res.status(200).send(
+    
+     res.send(
         res.json(extraData.extraRunsPerTeam2016)
     )
 })
