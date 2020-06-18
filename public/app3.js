@@ -19,9 +19,9 @@ function show() {
         //     console.log("response", typeof resp, resp)
         //     resp.json()
         // })
-        .then(respModified => {
-            visualizeData(respModified[year]);
-            function visualizeData(data) {
+        .then(resp => {
+            // (visualizeData(resp[year]))()
+            (function visualizeData(resp[year]) {
                 console.log(data, "from client side")
 
                 let a = [];
@@ -78,7 +78,7 @@ function show() {
                         }
                     }]
                 });
-            }
+            }())
         }).catch(err => {
             console.error('Error: ', err);
         })
