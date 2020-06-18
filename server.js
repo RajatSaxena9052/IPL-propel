@@ -15,7 +15,7 @@ app.get("/extra", async (req, res) => {
                 error: "this is not the season"
             })
     }
-    return res.status(200).send(data.extraRunsPerTeam2016)
+    return res.status(200).send(extraData.extraRunsPerTeam2016)
 })
 
 app.get("/economy", async (req, res) => {
