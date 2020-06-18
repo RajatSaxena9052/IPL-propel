@@ -13,12 +13,14 @@ function show() {
         alert("please select SEASON from the drop down list ")
     }
 
-    fetch('/extra?season=' + year)
+    // fetch('/extra?season=' + year)
+    fetch(`/extra/${year}`)
         .then((resp) => resp.json())
-        .then(resp => { visualizeData(resp[year]);
+        .then(resp => {
+            visualizeData(resp);
 
             function visualizeData(data) {
-               
+
                 console.log(data, "from client side")
 
                 let a = [];
