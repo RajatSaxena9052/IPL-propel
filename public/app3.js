@@ -20,8 +20,9 @@ function show() {
         //     resp.json()
         // })
         .then(resp => {
-            console.log("response", typeof resp, resp.data)
-            console.log("response", typeof resp, resp.json())
+            console.log("response", typeof resp, resp.body)
+            console.log("response", typeof resp, JSON.stringify(resp))
+            console.log("response", typeof resp, JSON.parse(resp))
 
             visualizeData(resp[year])
             function visualizeData(data) {
