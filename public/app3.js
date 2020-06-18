@@ -15,10 +15,10 @@ function show() {
 
     // fetch("http://localhost:3000/extra-runs?season="+year)
     fetch('/extra?season=' + year)
-        .then((resp) => {
-            console.log("response", typeof resp, resp)
-            resp.json()
-        })
+        // .then((resp) => {
+        //     console.log("response", typeof resp, resp)
+        //     resp.json()
+        // })
         .then(respModified => {
             visualizeData(respModified[year]);
             function visualizeData(data) {
