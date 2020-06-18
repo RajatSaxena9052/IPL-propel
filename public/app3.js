@@ -20,9 +20,11 @@ function show() {
         //     resp.json()
         // })
         .then(resp => {
-            // (visualizeData(resp[year]))()
-            (function visualizeData(resp[year]) {
+            console.log("response", typeof resp, resp)
+            visualizeData(resp[year])
+            function visualizeData(data) {
                 console.log(data, "from client side")
+                
 
                 let a = [];
                 for (let i in data) {
@@ -78,7 +80,7 @@ function show() {
                         }
                     }]
                 });
-            }())
+            }
         }).catch(err => {
             console.error('Error: ', err);
         })
