@@ -8,14 +8,16 @@ const fs = require('fs');
 let data = JSON.parse(fs.readFileSync('./public/data.json', 'utf-8'));
 let extraData = { ...data }
 
-app.get("/extra", async (req, res) => {
+app.get("/extra",async (req, res) => {
     if (!req.query.season) {
         return res.send(
             {
                 error: "this is not the season"
             })
     }
-    return res.status(200).send(extraData.extraRunsPerTeam2016)
+    return res.status(200).send(
+        res.json(extraData.extraRunsPerTeam2016)
+    )
 })
 
 app.get("/economy", async (req, res) => {
@@ -26,7 +28,7 @@ app.get("/economy", async (req, res) => {
             })
     }
 
-    return res.send(
+   return res.send(
         res.json(data.economicalBowler2015)
     )
 })
