@@ -25,21 +25,22 @@ app.get("/extra/:year", (req, res) => {
     //     res.json(extraData.extraRunsPerTeam2016)
     // )
 })
-
+/*
 app.get("/economy", (req, res) => {
-    if (!req.query.season1) {
+   if (!req.query.season1) {
         return res.send(
             {
                 error: "this is not the season"
             })
     }
-
+    let season1=parseInt(req.params.season1)
+console.log(extraData.economicalBowler2015[season1])
     res.send(
-        res.json(data.economicalBowler2015)
+        res.json(extraData.economicalBowler2015.season1)
     )
 })
 
-
+*/
 app.listen(PORT, () => {
     console.log("server is up and running !! please check http://localhost:3000/")
 })
