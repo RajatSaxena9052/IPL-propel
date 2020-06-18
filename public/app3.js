@@ -20,11 +20,13 @@ function show() {
         //     resp.json()
         // })
         .then(resp => {
-            console.log("response", typeof resp, resp)
+            console.log("response", typeof resp, resp.data)
+            console.log("response", typeof resp, resp.json())
+
             visualizeData(resp[year])
             function visualizeData(data) {
                 console.log(data, "from client side")
-                
+
 
                 let a = [];
                 for (let i in data) {
