@@ -9,9 +9,9 @@ let data = JSON.parse(fs.readFileSync('./public/data.json', 'utf-8'));
 let extraData = { ...data }
 
 app.get("/extra/:year", (req, res) => {
-    // console.log(req.params)
+    
    let year = req.params.year;
-    // console.log(req.params.year)
+
     res.send(JSON.stringify(extraData.extraRunsPerTeam2016[year]))
 
     // if (!req.query.season) {
