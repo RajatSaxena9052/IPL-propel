@@ -9,9 +9,9 @@ function show() {
 
     let year = document.getElementById("season").value;
 
-    if (year == "") {
+    /*if (year == "") {
         alert("please select SEASON from the drop down list ")
-    }
+    }*/
 
     // fetch('/extra?season=' + year)
     fetch(`/extra/${year}`)
