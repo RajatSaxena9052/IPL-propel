@@ -20,7 +20,7 @@ function show() {
             visualizeData(resp);
             function visualizeData(data) {
 
-                console.log(data.toString(), "from client side")
+                console.log(resp, "from client side")
 
                 let a = [];
                 for (let i in data) {
