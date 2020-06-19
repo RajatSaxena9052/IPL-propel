@@ -18,7 +18,6 @@ function show() {
         .then((resp) => resp.json())
         .then(resp => {
             visualizeData(resp);
-
             function visualizeData(data) {
 
                 console.log(data, "from client side")
@@ -78,7 +77,5 @@ function show() {
                     }]
                 });
             }
-        }).catch(err => {
-            console.error('Error: ', err);
         })
 }
