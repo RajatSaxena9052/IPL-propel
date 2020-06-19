@@ -27,7 +27,7 @@ function show() {
                     a.push([i, data[i]])
                 }
 
-                Highcharts.chart("extra-Runs", {
+            /*    Highcharts.chart("extra-Runs", {
                     chart: {
                         type: 'column'
                     },
@@ -75,7 +75,7 @@ function show() {
                             }
                         }
                     }]
-                });
+                });*/
             }
         })
 }
