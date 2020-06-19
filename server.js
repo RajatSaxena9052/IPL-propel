@@ -5,7 +5,7 @@ let PORT = process.env.PORT || 3000;
 app.use(express.static("./public"));
 app.use(express.json())
 const fs = require('fs');
-let data = JSON.parse(fs.readFileSync('./public/data.json', 'utf-8'));
+let data = JSON.parse(fs.readFileSync('./public/data.json'));
 let extraData = { ...data}
 
 app.get("/extra/:year", (req, res) => {
