@@ -12,7 +12,7 @@ app.get("/extra/:year", (req, res) => {
     
    let year = req.params.year;
 
-    res.json(data.extraRunsPerTeam2016[year])
+    res.send(data.extraRunsPerTeam2016[year])
 
     // if (!req.query.season) {
     //     return res.send(
