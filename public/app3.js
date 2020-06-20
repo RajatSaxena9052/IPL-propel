@@ -15,7 +15,7 @@ function show() {
 
     // fetch('/extra?season=' + year)
     fetch(`/extra/${year}`)
-        //.then((resp) => JSON.parse(resp))
+        .then((resp) => resp.json())
         .then(resp => {
             visualizeData(resp);
             function visualizeData(data) {
