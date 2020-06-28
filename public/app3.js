@@ -17,8 +17,8 @@ function show() {
     fetch(`/extra/${year}`)
         .then((resp) => resp.json())
         .then(resp => {            
-            visualizeData(resp);
-        })
+            return visualizeData(resp);
+        
 
 function visualizeData(data) {
                 let a = [];
@@ -76,4 +76,5 @@ function visualizeData(data) {
                     }]
                 });
             }
-        }
+        })
+    }
