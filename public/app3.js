@@ -16,19 +16,17 @@ function show() {
     // fetch('/extra?season=' + year)
     fetch(`/extra/${year}`)
         .then((resp) => resp.json())
-        .then(resp => {
-            console.log(resp, "from client side")
-            
+        .then(resp => {            
             visualizeData(resp);
-                    function visualizeData(data) {
+        })
 
-
+function visualizeData(data) {
                 let a = [];
                 for (let i in data) {
                     a.push([i, data[i]])
                 }
 
-            /*  Highcharts.chart("extra-Runs", {
+     Highcharts.chart("extra-Runs", {
                     chart: {
                         type: 'column'
                     },
@@ -76,7 +74,6 @@ function show() {
                             }
                         }
                     }]
-                });*/
+                });
             }
-        })
-}
+        }
