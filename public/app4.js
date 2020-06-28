@@ -11,12 +11,13 @@
         alert("please select SEASON from the drop down list ")
         }
     
-    fetch('/economy?season1=' + year1)
+    fetch('/economy?season1='+year1)
 
         .then((resp)=>resp.json())
 
         .then((resp)=>{
-            visualizeEconomicalPlayer(resp[year1]);
+           //visualizeEconomicalPlayer(resp[year1]);
+            setTimeout(function(){ return visualizeEconomicalPlayer(resp[year1]); }, 3000);
 
     function visualizeEconomicalPlayer(data){
         let ar=[];
