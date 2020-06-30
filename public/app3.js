@@ -1,4 +1,4 @@
-function show() {
+async function show() {
     const div = document.getElementById("extra-Runs")
     div.addEventListener("mouseover", function () {
         div.style.backgroundColor = "blue"
@@ -14,19 +14,18 @@ function show() {
     }
 
     // fetch('/extra?season=' + year)
-    fetch(`/extra/${year}`)
-        .then((resp) => resp.json())
+    let data = await fetch(`/extra/${year}`).then(resp => resp.json())
         .then(resp => {            
     // visualizeData(resp);
         setTimeout(function(){ return visualizeData(resp); }, 3000);
 
-function visualizeData(data) {
+ function visualizeData(data) {
                 let a = [];
                 for (let i in data) {
                     a.push([i, data[i]])
                 }
 
-     Highcharts.chart("extra-Runs", {
+      Highcharts.chart("extra-Runs", {
                     chart: {
                         type: 'column'
                     },
@@ -75,6 +74,7 @@ function visualizeData(data) {
                         }
                     }]
                 });
+
             }
         })
     }
