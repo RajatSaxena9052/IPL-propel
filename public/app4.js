@@ -19,7 +19,7 @@
            //visualizeEconomicalPlayer(resp[year1]);
             setTimeout(function(){ return visualizeEconomicalPlayer(resp[year1]); }, 3000);
 
-    function visualizeEconomicalPlayer(data){
+    async function visualizeEconomicalPlayer(data){
         let ar=[];
         for(let i in data){
             ar.push([i,parseFloat(data[i])])
@@ -27,7 +27,7 @@
 
         ar = ar.sort((a, b) => a[1] - b[1])
 
-Highcharts.chart("economical-bowler", {
+await Highcharts.chart("economical-bowler", {
     chart: {
         type: 'column'
     },
