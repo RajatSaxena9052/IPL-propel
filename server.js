@@ -5,14 +5,14 @@ let PORT = process.env.PORT || 3000;
 app.use(express.static("./public"));
 app.use(express.json())
 const fs = require('fs');
-let data = JSON.parse(fs.readFileSync('./public/data.json','utf-8'));
+let Data = JSON.parse(fs.readFileSync('./public/data.json','utf-8'));
 //let extraData = { ...data }
 
 app.get("/extra/:year", (req, res) => {
     
    let year = req.params.year;
-
-    res.json(data.extraRunsPerTeam2016[year])
+    Data=Data.extraRunsPerTeam2016[year]
+    res.json(Data)
 
     // if (!req.query.season) {
     //     return res.send(

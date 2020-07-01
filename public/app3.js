@@ -26,7 +26,7 @@ function show() {
       });*/
 
 
-     (async ()=>{
+     /*(async ()=>{
       const res=await fetch(`/extra/${year}`);
       console.log("got the data")
       try {
@@ -38,20 +38,20 @@ function show() {
      catch(e) {
         console.log('error:', e.message);
         }
-    })();
+    })();*/
 
       
-/*
+
     // fetch('/extra?season=' + year)
     fetch(`/extra/${year}`)
-        .then(resp => resp.json())
-        .then(resp => { visualizeData(resp);
+        .then((resp) => resp.json())
+        .then((respo) => { visualizeData(respo);
         //setTimeout(function(){ return visualizeData(resp); }, 3000);
-*/
+
  function visualizeData(data) {
                 let a = [];
                 for (let i in data) {
-                    a.push([i, parseInt(data[i])])
+                    a.push([i, data[i]])
                 }
 
       Highcharts.chart("extra-Runs", {
@@ -80,12 +80,6 @@ function show() {
                             text: 'Extra Runs'
                         }
                     },
-                    legend: {
-                        enabled: false
-                    },
-                    tooltip: {
-                        pointFormat: 'Extra Runs: <b>{point.y:.0f}</b>'
-                    },
                     series: [{
                         name: 'Extra Runs',
                         data: a,
@@ -94,7 +88,7 @@ function show() {
                             rotation: -90,
                             color: '#FFFFFF',
                             align: 'right',
-                            format: '{point.y:.0f}', // one decimal
+                        
                             y: 10, // 10 pixels down from the top
                             style: {
                                 fontSize: '13px',
@@ -105,5 +99,5 @@ function show() {
                 });
 
             }
-        }/*)
-    }*/
+        });
+    }
