@@ -9,10 +9,10 @@ function show() {
 
     let year = document.getElementById("season").value;
 
-   /* if (year == "") {
+    if (year == "") {
         alert("please select SEASON from the drop down list ")
     }
-*/
+
    /* const promise1 = new Promise((resolve, reject) => {
         if(year!=""){
             resolve(fetch(`/extra/${year}`).then(res => res.json())
