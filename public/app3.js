@@ -15,9 +15,9 @@ async function show() {
 */
     const promise1 = new Promise((resolve, reject) => {
         if(year!=""){
-            resolve(fetch(`/extra/${year}`).then(resp => resp.json())
-            .then(resp => {            
-             visualizeData(resp)}))
+            resolve(fetch(`/extra/${year}`)/*.then(res => res.json())*/
+            .then(res => {            
+             visualizeData(res)}))
             }
         else{
             reject(alert("please select SEASON from the drop down list "));
