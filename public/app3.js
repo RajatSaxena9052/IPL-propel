@@ -9,15 +9,27 @@ async function show() {
 
     let year = document.getElementById("season").value;
 
-    if (year == "") {
+   /* if (year == "") {
         alert("please select SEASON from the drop down list ")
     }
+*/
+    const promise1 = new Promise((resolve, reject) => {
+        if(year!=""){
+            resolve(fetch(`/extra/${year}`).then(resp => resp.json())
+            .then(resp => {            
+             visualizeData(resp)}))
+            }
+        else{
+            reject(alert("please select SEASON from the drop down list "));
+        }
+
+      });
 
     // fetch('/extra?season=' + year)
-    let data = await fetch(`/extra/${year}`).then(resp => resp.json())
+    /*fetch(`/extra/${year}`).then(resp => resp.json())
         .then(resp => {            
-    // visualizeData(resp);
-        setTimeout(function(){ return visualizeData(resp); }, 3000);
+         visualizeData(resp);*/
+        //setTimeout(function(){ return visualizeData(resp); }, 3000);
 
  function visualizeData(data) {
                 let a = [];
@@ -76,5 +88,5 @@ async function show() {
                 });
 
             }
-        })
-    }
+        }/*)
+    }*/
