@@ -13,9 +13,9 @@ async function show() {
         alert("please select SEASON from the drop down list ")
     }
 */
-    const promise1 = new Promise((resolve, reject) => {
+   /* const promise1 = new Promise((resolve, reject) => {
         if(year!=""){
-            resolve(fetch(`/extra/${year}`)/*.then(res => res.json())*/
+            resolve(fetch(`/extra/${year}`).then(res => res.json())
             .then(res => {            
              visualizeData(res)}))
             }
@@ -23,12 +23,12 @@ async function show() {
             reject(alert("please select SEASON from the drop down list "));
         }
 
-      });
+      });*/
 
     // fetch('/extra?season=' + year)
-    /*fetch(`/extra/${year}`).then(resp => resp.json())
-        .then(resp => {            
-         visualizeData(resp);*/
+    fetch(`/extra/${year}`)
+        .then(resp => resp.json())
+        .then(resp => { visualizeData(resp);
         //setTimeout(function(){ return visualizeData(resp); }, 3000);
 
  function visualizeData(data) {
@@ -88,5 +88,5 @@ async function show() {
                 });
 
             }
-        }/*)
-    }*/
+        })
+    }
