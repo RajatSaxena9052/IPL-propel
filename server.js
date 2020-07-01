@@ -12,8 +12,8 @@ let Data = JSON.parse(fs.readFileSync('./public/data.json','utf-8'));
 app.get("/extra/:year", (req, res) => {
     
    let year = req.params.year;
-    Data=Data.extraRunsPerTeam2016[year]
-    res.send(Data)
+    let data=Data.extraRunsPerTeam2016[year]
+    res.send(data)
 
 })
 
@@ -25,9 +25,9 @@ app.get("/economy", (req, res) => {
             })
     }
 
-console.log(data.economicalBowler2015)
+console.log(Data.economicalBowler2015)
     res.send(
-        res.json(data.economicalBowler2015)
+        res.json(Data.economicalBowler2015)
     )
 })
 
