@@ -1,4 +1,4 @@
- /*function show1(){
+/*function show1(){
     const div=document.getElementById("economical-bowler")
     div.addEventListener("mouseover",function(){
         div.style.backgroundColor="blue"})
@@ -16,10 +16,10 @@
         .then((resp)=>resp.json())
 
         .then((resp)=>{
-           //visualizeEconomicalPlayer(resp[year1]);
-            setTimeout(function(){ return visualizeEconomicalPlayer(resp[year1]); }, 3000);
+           visualizeEconomicalPlayer(resp[year1]);
+            //setTimeout(function(){ return visualizeEconomicalPlayer(resp[year1]); }, 3000);
 
-    async function visualizeEconomicalPlayer(data){
+function visualizeEconomicalPlayer(data){
         let ar=[];
         for(let i in data){
             ar.push([i,parseFloat(data[i])])
@@ -27,7 +27,7 @@
 
         ar = ar.sort((a, b) => a[1] - b[1])
 
-await Highcharts.chart("economical-bowler", {
+        Highcharts.chart("economical-bowler", {
     chart: {
         type: 'column'
     },
@@ -79,5 +79,4 @@ await Highcharts.chart("economical-bowler", {
     }
         }).catch(err => {
             console.error('Error: ', err);});
-    }
-    */
+    }*/

@@ -13,36 +13,7 @@ function show() {
         alert("please select SEASON from the drop down list ")
     }
 
-   /* const promise1 = new Promise((resolve, reject) => {
-        if(year!=""){
-            resolve(fetch(`/extra/${year}`).then(res => res.json())
-            .then(res => {            
-             visualizeData(res)}))
-            }
-        else{
-            reject(alert("please select SEASON from the drop down list "));
-        }
-
-      });*/
-
-
-     /*(async ()=>{
-      const res=await fetch(`/extra/${year}`);
-      console.log("got the data")
-      try {
-        await res.json();
-        
-        console.log("json is converted into object now",res)
-         visualizeData(res)
-            }
-     catch(e) {
-        console.log('error:', e.message);
-        }
-    })();*/
-
-      
-
-    // fetch('/extra?season=' + year)
+  // fetch('/extra?season=' + year)
     fetch(`/extra/${year}`)
         .then((resp) => resp.json())
         .then((respo) => { visualizeData(respo);
