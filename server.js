@@ -26,7 +26,7 @@ app.get("/extra/:year", (req, res) => {
     // )
 
 })
-
+/*
 app.get("/economy", (req, res) => {
    if (!req.query.season1) {
         return res.send(
@@ -40,7 +40,7 @@ console.log(data.economicalBowler2015)
         res.json(data.economicalBowler2015)
     )
 })
-
+*/
 
 app.listen(PORT, () => {
     console.log("server is up and running !! please check http://localhost:3000/")

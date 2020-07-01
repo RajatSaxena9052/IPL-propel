@@ -1,4 +1,4 @@
- function show1(){
+ /*function show1(){
     const div=document.getElementById("economical-bowler")
     div.addEventListener("mouseover",function(){
         div.style.backgroundColor="blue"})
@@ -80,3 +80,4 @@ await Highcharts.chart("economical-bowler", {
         }).catch(err => {
             console.error('Error: ', err);});
     }
+    */
