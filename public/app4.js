@@ -4,7 +4,14 @@ function show1(){
         div.style.backgroundColor="blue"})
     div.addEventListener("mouseout",function(){
         div.style.backgroundColor="white"})
-          
+    
+   //to hide
+   const Z=document.getElementById("economical-bowler")
+   //console.log(Z.style.display)
+   if(Z.style.display === "none"){
+       Z.style.display = "block"
+   }     
+
         let year1 = document.getElementById("season1").value;
     
         if(year1 ==""){

@@ -1,4 +1,5 @@
 function show() {
+    
     const div = document.getElementById("extra-Runs")
     div.addEventListener("mouseover", function () {
         div.style.backgroundColor = "blue"
@@ -6,9 +7,15 @@ function show() {
     div.addEventListener("mouseout", function () {
         div.style.backgroundColor = "white"
     })
+    //to hide
+    const Z=document.getElementById("extra-Runs")
+    console.log(Z.style.display)
+    if(Z.style.display === "none"){
+        Z.style.display = "block"
+    }
+    
 
     let year = document.getElementById("season").value;
-
     if (year == "") {
         alert("please select SEASON from the drop down list ")
     }

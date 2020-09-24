@@ -25,7 +25,7 @@ function visualizeMatchesPlayedPerYear(MatchesPlayedPerYear) {
         div.style.backgroundColor = "white"
     })
     
-    var chart = Highcharts.chart("matches-played-per-year", {
+    /*var chart =*/ Highcharts.chart("matches-played-per-year", {
 
         title: {
             text:'1. Matches Played per season'
@@ -67,6 +67,7 @@ function visualizeMatchesWonPerTeam(matchesWonPerTeam) {
             }
         }
     }
+    console.log(Team)
     Team = Team.filter(s => s != "")
     //preparing chart visualization
     let score, ser = []
