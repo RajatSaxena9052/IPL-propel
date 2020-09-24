@@ -9,7 +9,7 @@ function show() {
     })
     //to hide
     const Z=document.getElementById("extra-Runs")
-    console.log(Z.style.display)
+    //console.log(Z.style.display)
     if(Z.style.display === "none"){
         Z.style.display = "block"
     }

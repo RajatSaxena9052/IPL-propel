@@ -67,7 +67,7 @@ function visualizeMatchesWonPerTeam(matchesWonPerTeam) {
             }
         }
     }
-    console.log(Team)
+   // console.log(Team)
     Team = Team.filter(s => s != "")
     //preparing chart visualization
     let score, ser = []
